@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+	.search-input {
+		@apply block md:bg-transparent md:rounded w-full sm:border-gray-300 md:border-0 sm:shadow-sm md:shadow-none
+			sm:focus:border-gray-300 sm:focus:ring-gray-300 md:focus:border-transparent
+			md:focus:ring-transparent sm:text-lg;
+	}
+	.crawl-button {
+		@apply mt-3 md:mr-1 md:m-0 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4
+			py-2 font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500
+			focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm;
+	}
+}
