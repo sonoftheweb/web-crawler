@@ -53,6 +53,9 @@ class Crawler
 	public function crawl(): void
 	{
 		for ($i = 1; $i <= $this->pages; $i++) {
+			if (count($this->pagesToBeParsed) === 0)
+				break;
+			
 			$html = $this->getPageHtml();
 			
 			$doc = new DOMDocument();
