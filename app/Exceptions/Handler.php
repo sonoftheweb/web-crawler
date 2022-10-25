@@ -46,5 +46,11 @@ class Handler extends ExceptionHandler
         $this->reportable(function (Throwable $e) {
             //
         });
+		
+		$this->renderable(function (CrawlerFailedException $e, $request) {
+			return response()->json([
+				'error' => $e->getMessage(),
+			], 404);
+		});
     }
 }
